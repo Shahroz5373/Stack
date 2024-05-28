@@ -14,21 +14,23 @@ Stack::Stack(const int& _size){
 }
 
 bool Stack::push(const int&element){
-	if((size-tos)>1){
-		arr[++tos] = element;
-		return true;
+	if(isFull()){
+		cout << "Stack if Full " << endl;
+		return false;
 	}
 	else {
-		return false;
+		arr[++tos] = element;
+		return true;
 	}
 }
 
 int Stack::pop(){
-	if (isEmpty() == false) {
-		return arr[tos--];
+	if (isEmpty()) {
+		cout << "Stack is Empty " << endl;
+		return -1;
 	}
 	else {
-		return -1;
+		return arr[tos--];
 	}
 
 }
