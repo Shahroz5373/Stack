@@ -15,6 +15,8 @@ public:
 	int pop();
 
 	bool isEmpty()const { return(tos==-1); }
+	bool isFull()const { return(tos ==( size- 1)); }
+
 	int getTos()const { return tos; }
 	void printStack()const;
 
